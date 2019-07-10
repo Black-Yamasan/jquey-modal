@@ -1,0 +1,30 @@
+<%_
+  var root = '';
+  var pageId = 'index';
+  var title = 'slider demo page';
+  var description = '';
+  var keywords = '';
+  var cssFile = ['index'];
+  var jsFile = ['demo'];
+_%>
+<%_ include ../include/_header _%>
+
+  <div class="content">
+    <div class="contentInner">
+      <div class="contentGroup">
+        <button class="button js-modalOpen">OPEN</button>
+        <%_  for ( var i = 0; i < 10; i++ ) { _%>
+          <p class="contentText">text</p>
+        <%_ } _%>
+      </div>
+      <div class="contentGroup">
+        <button class="button js-modalOpen">OPEN</button>
+        <%_  for ( var i = 0; i < 10; i++ ) { _%>
+          <p class="contentText">text</p>
+        <%_ } _%>
+      </div>
+    </div>
+  </div>
+<%_ include ../components/_modal _%>
+
+<%_ include ../include/_footer _%>

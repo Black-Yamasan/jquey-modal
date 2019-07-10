@@ -1,0 +1,75 @@
+body.is-open-modal, html.is-open-modal  {
+  overflow: hidden;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  overflow-scrolling: touch;
+  opacity: 0;
+
+  &Wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    min-height: 100vh;
+  }
+
+  &Inner {
+    position: relative;
+    width: 100%;
+    padding: 50px 20px;
+  }
+
+  &Content {
+    position: relative;
+    max-width: $MAX_WIDTH;
+    margin: 0 auto;
+    padding: 40px 40px 100px 40px;
+    background: #fff;
+    border-radius: 10px;
+    z-index: 3;
+    cursor: auto;
+  }
+
+  &Content_text {
+    margin-bottom: 15px;
+    text-align: center;
+  }
+
+  &Close_button {
+    position: absolute;
+    text-align: center;
+    left: 50%;
+    bottom: 40px;
+    padding: 10px 35px;
+    border: 1px solid $BASE_COLOR;
+    background: $BASE_COLOR;
+    border-radius: 5px;
+    color: #fff;
+    transform: translate(-50%, 0);
+    cursor: pointer;
+  }
+
+  &Overlay {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+  }
+}

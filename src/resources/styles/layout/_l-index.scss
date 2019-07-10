@@ -1,0 +1,38 @@
+body {
+  font-size: 16px;
+  color: $BASE_COLOR;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 960px;
+  min-height: 100vh;
+  margin: 0 auto;
+
+  &Inner {
+    padding: 50px 0;
+  }
+
+  &Group {
+    margin-bottom: 50px;
+  }
+
+  &Text {
+    margin-top: 20px;
+    text-align: center;
+  }
+}
+
+.button {
+  display: block;
+  width: 200px;
+  margin: 0 auto;
+  padding: 15px;
+  text-align: center;
+  outline: none;
+  border-radius: 5px;
+  border: 1px solid $BASE_COLOR;
+  cursor: pointer;
+}
