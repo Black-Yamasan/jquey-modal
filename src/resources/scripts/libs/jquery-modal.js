@@ -11,6 +11,7 @@
     var $overlay = $(modalOptions.$overlay);
     var $html = $('html');
     var $body = $('body');
+    var $closeTarget = null;
 
     // options
     var isOpenAddClassName = modalOptions.isOpenAddClassName;
@@ -55,7 +56,9 @@
       openModal();
     });
 
-    $close.on('click', function() {
+    $close.on('click', function(e) {
+      $closeTarget = $(e.target);
+      if ( $closeTarget[0] !== $(this)[0] ) return false;
       closeModal();
     });
 
